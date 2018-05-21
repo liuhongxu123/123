@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0661ac880188d978da76d21034f8a87b",
+    "content-hash": "4156ae504a0945c3a6b8a3ad9a9fa841",
     "packages": [
         {
             "name": "dragonmantank/cron-expression",
@@ -395,6 +395,45 @@
                 "shim"
             ],
             "time": "2018-04-26T10:06:28+00:00"
+        },
+        {
+            "name": "topthink/think-orm",
+            "version": "v1.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/top-think/think-orm.git",
+                "reference": "b4f699dd78009d0c59c29436ddbfc301664ece6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/top-think/think-orm/b4f699dd78009d0c59c29436ddbfc301664ece6a.zip",
+                "reference": "b4f699dd78009d0c59c29436ddbfc301664ece6a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "think\\": "src"
+                },
+                "files": [
+                    "src/config.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "liu21st",
+                    "email": "liu21st@gmail.com"
+                }
+            ],
+            "description": "think orm",
+            "time": "2018-04-25T03:53:04+00:00"
         }
     ],
     "packages-dev": [
