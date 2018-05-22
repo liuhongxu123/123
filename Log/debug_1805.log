@@ -49,3 +49,6 @@
 18-05-21 22:51:09:Error at file[/app/demo/vendor/topthink/think-orm/src/db/Query.php] line[1580] message:[array_merge(): Argument #1 is not an array]
 18-05-21 22:51:09:Error at file[/app/demo/vendor/topthink/think-orm/src/db/Query.php] line[1589] message:[call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\' not found]
 18-05-21 22:51:09:Error at file[/app/demo/vendor/topthink/think-orm/src/db/Query.php] line[1593] message:[call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\' not found]
+18-05-21 22:57:53:Error at file[/app/demo/vendor/topthink/think-orm/src/db/Query.php] line[1580] message:[array_merge(): Argument #1 is not an array]
+18-05-21 22:57:53:Error at file[/app/demo/vendor/topthink/think-orm/src/db/Query.php] line[1589] message:[call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\' not found]
+18-05-21 22:57:53:Error at file[/app/demo/vendor/topthink/think-orm/src/db/Query.php] line[1593] message:[call_user_func() expects parameter 1 to be a valid callback, class '\think\paginator\driver\' not found]
