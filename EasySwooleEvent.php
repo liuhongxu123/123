@@ -13,6 +13,8 @@ use \EasySwoole\Core\Swoole\ServerManager;
 use \EasySwoole\Core\Swoole\EventRegister;
 use \EasySwoole\Core\Http\Request;
 use \EasySwoole\Core\Http\Response;
+use \EasySwoole\Core\Swoole\Process\ProcessManager;
+use App\Process\Test;
 
 Class EasySwooleEvent implements EventInterface {
 
@@ -25,6 +27,10 @@ Class EasySwooleEvent implements EventInterface {
     public static function mainServerCreate(ServerManager $server,EventRegister $register): void
     {
         // TODO: Implement mainServerCreate() method.
+        // 创建自定义进程 上面定时器中发送的消息 由 Test 类进行处理
+        // @see https://www.easyswoole.com/Manual/2.x/Cn/_book/Advanced/process.html
+        // ------------------------------------------------------------------------------------------
+        ProcessManager::getInstance()->addProcess('test', Test::class);
     }
 
     public static function onRequest(Request $request,Response $response): void
