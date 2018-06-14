@@ -30,10 +30,11 @@ Class EasySwooleEvent implements EventInterface {
         // 创建自定义进程 上面定时器中发送的消息 由 Test 类进行处理
         // @see https://www.easyswoole.com/Manual/2.x/Cn/_book/Advanced/process.html
         // ------------------------------------------------------------------------------------------
-        $num = 4;
-        for($i=1;$i<$num;$i++){
-            ProcessManager::getInstance()->addProcess("test$i", Test::class);
-        }
+        //自定义进程
+//        $num = 4;
+//        for($i=1;$i<$num;$i++){
+//            ProcessManager::getInstance()->addProcess("test$i", Test::class);
+//        }
     }
 
     public static function onRequest(Request $request,Response $response): void

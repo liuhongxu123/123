@@ -5,6 +5,7 @@ namespace App\HttpController;
 use EasySwoole\Core\Http\AbstractInterface\Controller;
 use EasySwoole\Core\Swoole\Task\TaskManager;
 use EasySwoole\Core\Swoole\Time\Timer;
+use App\Process\Task;
 /**
  * Class Index
  * @package App\HttpController
@@ -56,7 +57,7 @@ class Index extends Controller
     function task()
     {
         $tasks[] = function () { sleep(1);var_dump(time()); }; // 任务1
-        $tasks[] = function () { sleep(2);var_dump(time()); };     // 任务2
+        $tasks[] = function () { sleep(2);var_dump(time()); }; // 任务2
         $tasks[] = function () { sleep(3);var_dump(time()); }; // 任务3
 
         /**
@@ -66,6 +67,16 @@ class Index extends Controller
          * @return array|bool 每个任务的执行结果
          */
         TaskManager::barrier($tasks, 3.5);
+    }
+
+    /*
+     * 异步任务模板类
+     *
+     */
+    function tem()
+    {
+        $taskClass = new Task('taskData');
+        TaskManager::async($taskClass);
     }
 
 
