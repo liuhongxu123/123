@@ -497,3 +497,20 @@
 [2018-06-08 17:27:06 $11196.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
 [2018-06-08 17:27:06 $11196.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
 [2018-06-08 17:27:06 $11196.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2018-06-14 14:11:40 #12778.1]	NOTICE	Server is shutdown now.
+[2018-06-14 14:12:36 #12846.1]	NOTICE	Server is shutdown now.
+[2018-06-14 14:14:42 #12918.1]	NOTICE	Server is shutdown now.
+[2018-06-14 15:36:57 #17721.1]	NOTICE	Server is shutdown now.
+PHP Warning:  file_put_contents(/app/demo/Log/debug_1806.log): failed to open stream: No such file or directory in /app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.php on line 40
+
+Warning: file_put_contents(/app/demo/Log/debug_1806.log): failed to open stream: No such file or directory in /app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.php on line 40
+Error at file[/app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.php] line[40] message:[file_put_contents(/app/demo/Log/debug_1806.log): failed to open stream: No such file or directory]
+Error at file[/app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.php] line[40] message:[file_put_contents(/app/demo/Log/debug_1806.log): failed to open stream: No such file or directory]
+PHP Warning:  file_put_contents(/app/demo/Log/debug_1806.log): failed to open stream: No such file or directory in /app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.php on line 40
+
+Warning: file_put_contents(/app/demo/Log/debug_1806.log): failed to open stream: No such file or directory in /app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.php on line 40
+Error at file[/app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.php] line[40] message:[file_put_contents(/app/demo/Log/debug_1806.log): failed to open stream: No such file or directory]
+Error at file[/app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.php] line[40] message:[file_put_contents(/app/demo/Log/debug_1806.log): failed to open stream: No such file or directory]
+[2018-06-14 15:41:20 #17839.1]	NOTICE	Server is shutdown now.
+[2018-06-14 15:47:36 #18337.1]	NOTICE	Server is shutdown now.
+[2018-06-14 16:48:21 #19015.1]	NOTICE	Server is shutdown now.

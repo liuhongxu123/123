@@ -15,6 +15,7 @@ use \EasySwoole\Core\Http\Request;
 use \EasySwoole\Core\Http\Response;
 use \EasySwoole\Core\Swoole\Process\ProcessManager;
 use App\Process\Test;
+use App\Process\Inotify;
 
 Class EasySwooleEvent implements EventInterface {
 
@@ -26,6 +27,9 @@ Class EasySwooleEvent implements EventInterface {
 
     public static function mainServerCreate(ServerManager $server,EventRegister $register): void
     {
+        // 天天都在问的服务热重启 单独启动一个进程处理,需要pecl install inotify
+        // ------------------------------------------------------------------------------------------
+//        ProcessManager::getInstance()->addProcess('autoReload', Inotify::class);
         // TODO: Implement mainServerCreate() method.
         // 创建自定义进程 上面定时器中发送的消息 由 Test 类进行处理
         // @see https://www.easyswoole.com/Manual/2.x/Cn/_book/Advanced/process.html

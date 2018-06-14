@@ -8,7 +8,6 @@
 
 namespace App\Process;
 use EasySwoole\Core\Swoole\Task\AbstractAsyncTask;
-
 class Task extends AbstractAsyncTask
 {
 
@@ -21,7 +20,6 @@ class Task extends AbstractAsyncTask
      */
     function run($taskData, $taskId, $fromWorkerId)
     {
-        var_dump(123);
         // 需要注意的是task编号并不是绝对唯一
         // 每个worker进程的编号都是从0开始
         // 所以 $fromWorkerId + $taskId 才是绝度唯一的编号

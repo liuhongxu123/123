@@ -10,6 +10,7 @@ use App\Process\Task;
  * Class Index
  * @package App\HttpController
  */
+
 class Index extends Controller
 {
     /**
@@ -18,6 +19,7 @@ class Index extends Controller
      */
     function index()
     {
+        $this->response()->write('hello!1234567');
         $this->response()->withHeader('Content-type', 'text/html;charset=utf-8');
         $this->response()->write('<div style="text-align: center;margin-top: 30px"><h2>欢迎使用EASYSWOOLE</h2></div></br>');
         $this->response()->write('<div style="text-align: center">您现在看到的页面是默认的 Index 控制器的输出</div></br>');
