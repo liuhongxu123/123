@@ -6,6 +6,7 @@ use EasySwoole\Core\Http\AbstractInterface\Controller;
 use EasySwoole\Core\Swoole\Task\TaskManager;
 use EasySwoole\Core\Swoole\Time\Timer;
 use App\Process\Task;
+use EasySwoole\Core\Http\Response;
 /**
  * Class Index
  * @package App\HttpController
@@ -19,11 +20,15 @@ class Index extends Controller
      */
     function index()
     {
-        $this->response()->write('hello!1234567');
+        $this->response()->write('hello');
         $this->response()->withHeader('Content-type', 'text/html;charset=utf-8');
         $this->response()->write('<div style="text-align: center;margin-top: 30px"><h2>欢迎使用EASYSWOOLE</h2></div></br>');
         $this->response()->write('<div style="text-align: center">您现在看到的页面是默认的 Index 控制器的输出</div></br>');
         $this->response()->write('<div style="text-align: center"><a href="https://www.easyswoole.com/Manual/2.x/Cn/_book/Base/http_controller.html">查看手册了解详细使用方法</a></div></br>');
+    }
+
+    function hello(){
+        $this->response()->write('hello');
     }
 
     function asy()
@@ -35,7 +40,7 @@ class Index extends Controller
          * @param int   $taskWorkerId   指定投递的Task进程编号 (默认随机投递给空闲进程)
          * @return bool 投递成功 返回整数 $task_id 投递失败 返回 false
          */
-        TaskManager::async(function () {
+        TaskManager::async(function (){
             echo "执行异步任务...\n";
             return true;
         }, function () {

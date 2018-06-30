@@ -37,7 +37,7 @@ Class EasySwooleEvent implements EventInterface {
         //自定义进程
 //        $num = 4;
 //        for($i=1;$i<$num;$i++){
-//            ProcessManager::getInstance()->addProcess("test$i", Test::class);
+             ProcessManager::getInstance()->addProcess("test", Test::class);
 //        }
     }
 

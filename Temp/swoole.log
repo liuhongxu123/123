@@ -514,3 +514,30 @@ Error at file[/app/demo/vendor/easyswoole/easyswoole/src/Core/Component/Logger.p
 [2018-06-14 15:41:20 #17839.1]	NOTICE	Server is shutdown now.
 [2018-06-14 15:47:36 #18337.1]	NOTICE	Server is shutdown now.
 [2018-06-14 16:48:21 #19015.1]	NOTICE	Server is shutdown now.
+[2018-06-19 11:18:58 $21481.0]	WARNING	swManager_check_exit_status: worker#8 abnormal exit, status=255, signal=0
+[2018-06-19 11:22:08 $21682.0]	WARNING	swManager_check_exit_status: worker#8 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:30 $25971.0]	WARNING	swManager_check_exit_status: worker#9 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:30 $25971.0]	WARNING	swManager_check_exit_status: worker#10 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:30 $25971.0]	WARNING	swManager_check_exit_status: worker#11 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:31 $25971.0]	WARNING	swManager_check_exit_status: worker#12 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:31 $25971.0]	WARNING	swManager_check_exit_status: worker#13 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:31 $25971.0]	WARNING	swManager_check_exit_status: worker#14 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:31 $25971.0]	WARNING	swManager_check_exit_status: worker#15 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:32 $25971.0]	WARNING	swManager_check_exit_status: worker#8 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:32 $25971.0]	WARNING	swManager_check_exit_status: worker#9 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:32 $25971.0]	WARNING	swManager_check_exit_status: worker#10 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:32 $25971.0]	WARNING	swManager_check_exit_status: worker#11 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:33 $25971.0]	WARNING	swManager_check_exit_status: worker#12 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:33 $25971.0]	WARNING	swManager_check_exit_status: worker#13 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:33 $25971.0]	WARNING	swManager_check_exit_status: worker#14 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:33 $25971.0]	WARNING	swManager_check_exit_status: worker#15 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:34 $25971.0]	WARNING	swManager_check_exit_status: worker#8 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:34 $25971.0]	WARNING	swManager_check_exit_status: worker#9 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:34 $25971.0]	WARNING	swManager_check_exit_status: worker#10 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:34 $25971.0]	WARNING	swManager_check_exit_status: worker#11 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:35 $25971.0]	WARNING	swManager_check_exit_status: worker#12 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:35 $25971.0]	WARNING	swManager_check_exit_status: worker#13 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:35 $25971.0]	WARNING	swManager_check_exit_status: worker#14 abnormal exit, status=255, signal=0
+[2018-06-21 19:16:35 $25971.0]	WARNING	swManager_check_exit_status: worker#15 abnormal exit, status=255, signal=0
+[2018-06-23 14:28:58 #24292.1]	NOTICE	Server is shutdown now.
+[2018-06-30 09:44:40 #17030.1]	NOTICE	Server is shutdown now.

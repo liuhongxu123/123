@@ -10,9 +10,17 @@ class Test extends AbstractProcess
         // TODO: Implement run() method.
         //添加进程内定时器
         $this->addTick(2000,function (){
-            var_dump('this is '.$this->getProcessName().' process tick');
+            $url = "http://120.79.12.66:9501/Hotel/Index";
+            $ch = curl_init();
+            $timeout = 5;
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+            $contents = curl_exec($ch);
+            curl_close($ch);
         });
     }
+
     //当进程关闭的时候会执行该事件
     public function onShutDown()
     {
