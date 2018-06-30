@@ -22,6 +22,7 @@ class Index extends Controller
         $this->response()->write('<div style="text-align: center">您现在看到的页面是默认的 Index 控制器的输出</div></br>');
         $this->response()->write('<div style="text-align: center"><a href="https://www.easyswoole.com/Manual/2.x/Cn/_book/Base/http_controller.html">查看手册了解详细使用方法</a></div></br>');
     }
+<<<<<<< HEAD
 
     function redis()
     {
@@ -50,3 +51,6 @@ class Index extends Controller
     }
 
 }
+=======
+}
+>>>>>>> 805f493ae1946d1e7c4436552effa52ff7c04a61
