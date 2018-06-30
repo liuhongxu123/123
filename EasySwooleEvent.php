@@ -16,6 +16,9 @@ use \EasySwoole\Core\Http\Response;
 use \EasySwoole\Core\Swoole\Process\ProcessManager;
 use App\Process\Test;
 use App\Process\Inotify;
+use App\Utility\MysqlPool;
+use EasySwoole\Core\Component\Pool\PoolManager;
+use think\Db;
 
 Class EasySwooleEvent implements EventInterface {
 
@@ -23,6 +26,10 @@ Class EasySwooleEvent implements EventInterface {
     {
         // TODO: Implement frameInitialize() method.
         date_default_timezone_set('Asia/Shanghai');
+        // 获得数据库配置
+        $dbConf = Config::getInstance()->getConf('database');
+        // 全局初始化
+        Db::setConfig($dbConf);
     }
 
     public static function mainServerCreate(ServerManager $server,EventRegister $register): void
@@ -39,6 +46,13 @@ Class EasySwooleEvent implements EventInterface {
 //        for($i=1;$i<$num;$i++){
              ProcessManager::getInstance()->addProcess("test", Test::class);
 //        }
+	    // 数据库协程连接池
+        // @see https://www.easyswoole.com/Manual/2.x/Cn/_book/CoroutinePool/mysql_pool.html?h=pool
+        // ------------------------------------------------------------------------------------------
+        // TODO 作用未知，文档没写
+        if (version_compare(phpversion('swoole'), '2.1.0', '>=')) {
+            PoolManager::getInstance()->registerPool(MysqlPool::class, 3, 10);
+        }
     }
 
     public static function onRequest(Request $request,Response $response): void

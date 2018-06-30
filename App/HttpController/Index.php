@@ -7,6 +7,9 @@ use EasySwoole\Core\Swoole\Task\TaskManager;
 use EasySwoole\Core\Swoole\Time\Timer;
 use App\Process\Task;
 use EasySwoole\Core\Http\Response;
+use EasySwoole\Core\Component\Pool\PoolManager;
+use App\Utility\MysqlPool;
+use App\Server\Redis;
 /**
  * Class Index
  * @package App\HttpController
@@ -20,15 +23,16 @@ class Index extends Controller
      */
     function index()
     {
-        $this->response()->write('hello');
+        $pool = PoolManager::getInstance()->getPool(MysqlPool::class); // 获取连接池对象
+        $db = $pool->getObj();
+        $count = $db->rawQuery('select count(*) from easyswoole');
+        $pool->freeObj($db);
+        print_r($count);
         $this->response()->withHeader('Content-type', 'text/html;charset=utf-8');
+        $this->response()->write('hello world!');
         $this->response()->write('<div style="text-align: center;margin-top: 30px"><h2>欢迎使用EASYSWOOLE</h2></div></br>');
         $this->response()->write('<div style="text-align: center">您现在看到的页面是默认的 Index 控制器的输出</div></br>');
         $this->response()->write('<div style="text-align: center"><a href="https://www.easyswoole.com/Manual/2.x/Cn/_book/Base/http_controller.html">查看手册了解详细使用方法</a></div></br>');
-    }
-
-    function hello(){
-        $this->response()->write('hello');
     }
 
     function asy()
@@ -86,5 +90,30 @@ class Index extends Controller
         TaskManager::async($taskClass);
     }
 
+    function redis()
+    {
+        $connect = new Redis();
+        $redis = $connect->getConnect();
+        for($i=0;$i<=50;$i++){
+            try{
+                $redis->rPush('click',$i);//队列
+            }catch(\Exception $e){
+                var_dump($e);
+            }
+        }
+        var_dump($redis->lrange('click',0,50));//打印刚存进redis的队列
+    }
+
+    function pop()
+    {
+        try{
+            $connect = new Redis();
+            $redis = $connect->getConnect();
+            $value = $redis->lpop('click');
+            var_dump($value);
+        }catch(\Exception $e){
+            var_dump($e);
+        }
+    }
 
 }
