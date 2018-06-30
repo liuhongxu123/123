@@ -1,4 +1,4 @@
-[2018-06-08 13:55:49 *32515.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /app/demo/vendor/easyswoole/easyswoole/src/Core/Core.php on line 86.
-[2018-06-08 13:55:49 $32503.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
-[2018-06-08 13:56:07 *32582.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /app/demo/vendor/easyswoole/easyswoole/src/Core/Core.php on line 86.
-[2018-06-08 13:56:07 $32570.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2018-05-21 18:24:47 *26081.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 262144 bytes) in /app/demo/vendor/composer/ClassLoader.php on line 321.
+[2018-05-21 18:24:47 $26069.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0
+[2018-05-21 22:44:27 *26463.2]	ERROR	zm_deactivate_swoole (ERROR 503): Fatal error: Allowed memory size of 134217728 bytes exhausted (tried to allocate 262144 bytes) in /app/demo/vendor/composer/ClassLoader.php on line 321.
+[2018-05-21 22:44:27 $26451.0]	WARNING	swManager_check_exit_status: worker#2 abnormal exit, status=255, signal=0

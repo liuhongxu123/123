@@ -15,6 +15,7 @@ use \EasySwoole\Core\Http\Request;
 use \EasySwoole\Core\Http\Response;
 use App\Utility\MysqlPool;
 use EasySwoole\Core\Component\Pool\PoolManager;
+use think\Db;
 
 Class EasySwooleEvent implements EventInterface {
 
@@ -22,6 +23,10 @@ Class EasySwooleEvent implements EventInterface {
     {
         // TODO: Implement frameInitialize() method.
         date_default_timezone_set('Asia/Shanghai');
+        // 获得数据库配置
+        $dbConf = Config::getInstance()->getConf('database');
+        // 全局初始化
+        Db::setConfig($dbConf);
     }
 
     public static function mainServerCreate(ServerManager $server,EventRegister $register): void
